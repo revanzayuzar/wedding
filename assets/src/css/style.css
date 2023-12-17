@@ -1,0 +1,692 @@
+/* Revan & Viza | Wedding */
+
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Dosis:wght@200;300;400;500;600;700;800&family=Great+Vibes&family=Mooli&family=Pinyon+Script&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rouge+Script&display=swap');
+
+:root {
+    --primary: rgb(255, 175, 175);
+    --primary-light: rgb(255, 200, 200);
+    --primary-dark: rgb(255, 150, 150);
+
+    --secondary: rgb(200, 200, 200);
+    --secondary-light: rgb(225, 225, 225);
+    --secondary-dark: rgb(175, 175, 175);
+
+    --important: rgb(125, 125, 255);
+    --important-light: rgb(150, 150, 222);
+    --important-dark: rgb(100, 100, 222);
+
+    --focus: var(--important);
+
+    --header: rgba(255, 200, 200, 1);
+    --footer: var(--primary-light);
+
+    --white: rgb(250, 250, 250);
+    --black: rgb(25, 25, 25);
+    --red: rgb(222, 0, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+body {
+    font-family: 'Mooli', sans-serif;
+    font-size: 15px;
+}
+
+.container-section {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--primary-light);
+    z-index: 90;
+}
+
+.container-section-finish {
+    display: none;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 98;
+}
+
+form.passwordForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login label {
+    font-weight: 500;
+}
+
+.login input {
+    width: 250px;
+    background-color: var(--secondary-light);
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding: 5px;
+    border: 2.5px solid var(--primary-dark);
+    border-radius: 5px;
+    transition: all 0.25s ease-out;
+}
+
+.login input:focus {
+    border-color: var(--important-light);
+    transition: all 0.25s ease-out;
+}
+
+.login button {
+    width: 150px;
+    background-color: var(--primary);
+    box-shadow: 0 5px 10px var(--important);
+    padding: 7px;
+    border-radius: 25px;
+    transform: scale(1);
+    transition: all 0.25s ease-out;
+}
+
+.login button:hover {
+    background-color: var(--primary-dark);
+    transform: scale(0.98);
+    transition: all 0.25s ease-out;
+}
+
+.notif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 99;
+    transform: scale(0);
+}
+
+.notif-active {
+    transform: scale(1);
+    transition: all 0.15s ease-out;
+}
+
+.password-salah {
+    position: fixed;
+    width: max-content;
+    background-color: var(--black);
+    padding: 50px;
+    border: 1.5px solid var(--white);
+    border-radius: 10px;
+}
+
+.password-salah p {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.password-salah i {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    color: var(--red);
+    background-color: var(--black);
+    font-size: 22px;
+    padding: 5px 8px;
+    border-radius: 50%;
+}
+
+.welcome,
+.desainer,
+.loading-01,
+.loading-02,
+.loading-03,
+.loading-04 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 97;
+    padding: 0 75px;
+    padding-bottom: 50px;
+}
+
+.welcome {
+    z-index: 99;
+}
+
+.loading-01 {
+    z-index: 96;
+}
+
+.loading-02 {
+    z-index: 95;
+}
+
+.loading-03 {
+    z-index: 94;
+}
+
+.loading-04 {
+    z-index: 93;
+}
+
+.transition-next {
+    opacity: 1;
+    transition: opacity 1.5s ease-out;
+}
+
+.welcome h1 {
+    color: var(--red);
+    font-family: 'Great Vibes', cursive;
+    font-size: 33px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.desainer h1 {
+    color: var(--red);
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+.desainer h2 {
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+@keyframes lanjutkan {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.welcome p,
+.desainer p {
+    position: fixed;
+    bottom: 25px;
+    color: black;
+    font-weight: 500;
+    text-transform: uppercase;
+    animation: lanjutkan 1.5s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.login-hidden,
+.desainer-hidden,
+.loading-01-hidden,
+.loading-02-hidden,
+.loading-03-hidden,
+.loading-04-hidden {
+    opacity: 0;
+}
+
+.welcome-finish,
+.login-finish,
+.desainer-finish,
+.loading-finish {
+    display: none;
+}
+
+@keyframes love {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.loading .love {
+    color: var(--red);
+    font-size: 75px;
+    animation: love 3s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.loading h1 {
+    color: var(--red);
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+.loading h2 {
+    color: var(--black);
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+.loading p {
+    color: var(--red);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.next-back {
+    margin-top: 22px;
+}
+
+.next-01,
+.next-02,
+.next-03,
+.next-04,
+.back-01,
+.back-02,
+.back-03 {
+    color: var(--red);
+    background-color: white;
+    box-shadow: 0 5px 10px var(--red);
+    font-size: 40px;
+    margin: 0 10px;
+    padding: 5px 7px;
+    border-radius: 50%;
+}
+
+.next-01:hover,
+.next-02:hover,
+.next-03:hover,
+.next-04:hover,
+.back-01:hover,
+.back-02:hover,
+.back-03:hover {
+    transform: scale(0.96);
+}
+
+img#top-left,
+img#bottom-right {
+    width: 150px;
+    position: fixed;
+}
+
+img#top-left {
+    top: 10px;
+    left: 7px;
+    transform: rotate(90deg);
+}
+
+img#bottom-right {
+    bottom: 10px;
+    right: 7px;
+    transform: rotate(270deg);
+}
+
+.img-finish {
+    display: none;
+}
+
+.fixed {
+    position: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    background-color: var(--header);
+    padding: 5px 25px;
+    border-bottom: 1.5px solid var(--white);
+    box-shadow: 0 3px 7px var(--black);
+}
+
+header h1 {
+    color: var(--red);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.container-nav {
+    width: 60%;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: var(--red);
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    padding: 3px 10px;
+    border-radius: 10px;
+    box-shadow: 0 3px 7px var(--red);
+    transform: scale(1);
+    transition: all 0.25s ease-out;
+}
+
+.navbar a:hover {
+    box-shadow: 0 3px 7px var(--important);
+    transform: scale(0.96);
+    transition: all 0.25s ease-out;
+}
+
+.menu,
+.close {
+    display: none;
+    color: var(--red);
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../img/background/01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-opacity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0.6);
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.hero h1 {
+    color: var(--primary-light);
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.hero h2 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.hero h3 {
+    color: var(--primary-light);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.hero .hitung-mundur {
+    width: max-content;
+    color: var(--red);
+    background-color: var(--secondary-light);
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 10px;
+    padding-bottom: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 5px 10px var(--important);
+}
+
+.content {
+    padding: 100px;
+}
+
+.sambutan {
+    background-color: var(--primary);
+}
+
+.content .judul {
+    width: max-content;
+    background-color: var(--secondary-light);
+    margin: auto;
+    margin-bottom: 50px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 5px 10px var(--red);
+}
+
+.sambutan img {
+    display: block;
+    width: 250px;
+    margin: auto;
+}
+
+.sambutan .container-slot {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sambutan .slot {
+    width: 45%;
+}
+
+.content h1,
+.sambutan .slot h1 {
+    color: var(--black);
+    font-family: 'Great Vibes', cursive;
+    font-size: 33px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.content h1 {
+    color: var(--red);
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.content h2 {
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sambutan .slot p {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.tentang {
+    background-color: var(--secondary);
+}
+
+.tentang .container-slot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tentang .slot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    text-align: center;
+}
+
+.tentang img {
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+
+.tentang .slot img {
+    display: block;
+    width: 222px;
+    height: auto;
+    border: 10px solid var(--primary);
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 5px 10px var(--black);
+}
+
+.tentang .slot h1 {
+    color: var(--red);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.cerita {
+    background-color: var(--primary);
+}
+
+.cerita p {
+    text-align: justify;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
+.cerita h6 {
+    color: var(--red);
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 25px;
+}
+
+.cerita h6 span {
+    font-size: 12px;
+}
+
+.galeri {
+    background-color: var(--secondary);
+}
+
+.galeri .container-slot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.galeri .slot {
+    width: 18%;
+}
+
+.galeri .slot h3 {
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.galeri .slot img {
+    width: 100%;
+    border: 5px solid var(--primary);
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 5px 10px var(--black);
+}
+
+.acara {
+    background-color: var(--primary);
+}
+
+.acara .container-slot {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.acara .slot {
+    width: 30%;
+    text-align: center;
+}
+
+.acara .slot i {
+    color: var(--red);
+    font-size: 50px;
+}
+
+.acara .slot p {
+    color: var(--black);
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.acara h6 {
+    color: var(--red);
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 50px;
+}
+
+footer {
+    background-color: var(--primary-dark);
+    box-shadow: 0 0 10px var(--red);
+    text-align: center;
+    padding: 50px 100px;
+}
+
+footer h1 {
+    color: var(--red);
+    font-size: 30px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+footer h2 {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+footer h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 10px;
+}
