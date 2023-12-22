@@ -1,1 +1,285 @@
 /* Revan & Viza | Wedding */
+
+@media (max-width: 1080px) {
+
+    header {
+        padding: 5px 20px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .navbar a {
+        width: 14%;
+    }
+
+    .content {
+        padding: 100px 50px;
+    }
+
+    footer {
+        padding: 50px;
+    }
+
+}
+
+
+
+@media (max-width: 900px) {
+
+    .loading h2 {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+    .next-back {
+        margin-top: 15px;
+    }
+
+    .next-01,
+    .next-02,
+    .next-03,
+    .next-04,
+    .back-01,
+    .back-02,
+    .back-03 {
+        font-size: 30px;
+    }
+
+    img#top-left,
+    img#bottom-right {
+        width: 100px;
+    }
+
+    .menu,
+    .close {
+        display: block;
+    }
+
+    .menu {
+        transform: scale(1);
+        transition: transform 0.3s ease-out;
+    }
+
+    .menu-hidden {
+        transform: scale(0);
+        transition: transform 0.3s ease-out;
+    }
+
+    .close {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        z-index: 2;
+    }
+
+    .opacity {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.75);
+        transform: scale(0);
+    }
+
+    .opacity-active {
+        transform: scale(1);
+    }
+
+    .navbar {
+        width: 30%;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        background-color: var(--primary-light);
+        box-shadow: 0 0 15px red;
+        overflow-y: auto;
+        padding: 50px;
+        padding-top: 25px;
+        transform: translateX(111%);
+        transition: transform 0.3s ease-out;
+    }
+
+    .navbar-active {
+        transform: translateX(0);
+        transition: transform 0.3s ease-out;
+    }
+
+    .navbar a {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .content {
+        padding: 75px 25px;
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    .welcome,
+    .desainer,
+    .loading-01,
+    .loading-02,
+    .loading-03,
+    .loading-04 {
+        padding: 0 50px;
+    }
+
+    .desainer h2 {
+        font-size: 12px;
+    }
+
+    .loading .love {
+        font-size: 55px;
+    }
+
+    .loading h1 {
+        font-size: 25px;
+    }
+
+    .navbar {
+        width: 40%;
+    }
+
+    .sambutan .container-slot {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sambutan .slot {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .tentang .container-slot {
+        flex-direction: column;
+    }
+
+    .tentang .slot {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .tentang img {
+        margin: 25px 0;
+    }
+
+    .galeri .container-slot {
+        justify-content: space-around;
+    }
+
+    .galeri .slot {
+        width: 28%;
+        margin: 10px 0;
+    }
+
+    .acara .container-slot {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .acara .slot {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .acara h6 {
+        margin-top: 50px;
+    }
+
+    footer {
+        padding: 50px 25px;
+    }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    .tentang .slot {
+        flex-direction: column;
+    }
+
+    .galeri .slot {
+        width: 30%;
+    }
+
+}
+
+
+
+@media (max-width: 500px) {
+
+    .welcome,
+    .desainer,
+    .loading-01,
+    .loading-02,
+    .loading-03,
+    .loading-04 {
+        padding: 0 15px;
+    }
+
+    .navbar {
+        width: 50%;
+    }
+
+    .galeri .slot {
+        width: 45%;
+    }
+
+}
+
+
+
+@media (max-width: 425px) {
+
+    header {
+        padding: 5px 15px;
+    }
+
+    .navbar {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .content {
+        padding: 75px 10px;
+    }
+
+    .sambutan .slot h1 {
+        font-size: 28px;
+    }
+
+    .galeri .slot {
+        width: 65%;
+    }
+
+}
+
+
+
+@media (max-width: 375px) {
+
+    .galeri .slot {
+        width: 70%;
+    }
+
+    footer {
+        padding: 50px 10px;
+    }
+
+}

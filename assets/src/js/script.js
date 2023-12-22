@@ -11,14 +11,13 @@ welcome.addEventListener("click", function() {
     welcome.classList.remove("welcome");
     welcome.classList.add("welcome-finish");
     loginHidden.classList.remove("login-hidden");
-    login.classList.add("transition-next");
 });
 
 document.getElementById("passwordForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
     let masukkanPassword = document.getElementById("password").value;
-    let password = "cintayangabadi";
+    let password = "revvizaa";
     let notif = document.querySelector(".notif");
     let tutupNotifikasi = document.getElementById("tutup-notifikasi");
     let login = document.querySelector(".login");
@@ -151,3 +150,42 @@ let hitungMundur = setInterval(function() {
         document.getElementById("hitungMundur").innerHTML = hari + "h - " + jam + "j - " + menit + "m - " + detik + "d";
     }
 }, 1000);
+
+
+
+// Menampilkan Menu
+document.getElementById("menu").addEventListener("click", function() {
+    let menu = document.querySelector(".menu");
+    menu.classList.add("menu-hidden");
+    let opacity = document.querySelector(".opacity");
+    opacity.classList.add("opacity-active");
+    let navbar = document.querySelector(".navbar");
+    navbar.classList.add("navbar-active");
+});
+
+
+
+// Menyembunyikan Menu
+document.getElementById("close").addEventListener("click", function() {
+    let menu = document.querySelector(".menu");
+    menu.classList.remove("menu-hidden");
+    let opacity = document.querySelector(".opacity");
+    opacity.classList.remove("opacity-active");
+    let navbar = document.querySelector(".navbar");
+    navbar.classList.remove("navbar-active");
+});
+
+const navbar = document.querySelector(".navbar");
+const buttonMenu = document.getElementById("menu");
+const buttonClose = document.getElementById("close");
+
+document.addEventListener("click", function(event) {
+    if (!navbar.contains(event.target) && !buttonMenu.contains(event.target) && !buttonClose.contains(event.target)) {
+        let menu = document.querySelector(".menu");
+        menu.classList.remove("menu-hidden");
+        let opacity = document.querySelector(".opacity");
+        opacity.classList.remove("opacity-active");
+        let navbar = document.querySelector(".navbar");
+        navbar.classList.remove("navbar-active");
+    }
+});
