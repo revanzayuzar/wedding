@@ -116,6 +116,7 @@
     .navbar a {
         width: 100%;
         margin-top: 50px;
+        padding: 5px 0;
     }
 
     .content {
@@ -174,7 +175,11 @@
     }
 
     .tentang img {
-        margin: 25px 0;
+        margin: 50px 0;
+    }
+
+    .tentang-end img {
+        margin: 0;
     }
 
     .galeri .container-slot {
@@ -234,7 +239,7 @@
     }
 
     .navbar {
-        width: 50%;
+        width: 60%;
     }
 
     .galeri .slot {

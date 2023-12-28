@@ -375,7 +375,7 @@ header {
     background-color: var(--header);
     padding: 5px 25px;
     border-bottom: 1.5px solid var(--white);
-    box-shadow: 0 3px 7px var(--black);
+    box-shadow: 0 2.5px 10px var(--black);
 }
 
 header h1 {
@@ -478,6 +478,81 @@ header h1 {
     padding: 100px 75px;
 }
 
+@keyframes gradient-01 {
+    0% {
+        background-position: left;
+    }
+
+    50% {
+        background-position: right;
+    }
+
+    100% {
+        background-position: left;
+    }
+}
+
+@keyframes color-to-color-01 {
+    0% {
+        background-color: var(--primary);
+    }
+
+    50% {
+        background-color: var(--secondary);
+    }
+
+    100% {
+        background-color: var(--primary);
+    }
+}
+
+.sambutan,
+.cerita,
+.acara {
+    /* background-image: linear-gradient(to right, var(--primary), var(--secondary)); */
+    /* background-size: 200%; */
+    /* animation: gradient-01 15s infinite; */
+    animation: color-to-color-01 15s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes gradient-02 {
+    0% {
+        background-position: right;
+    }
+
+    50% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+@keyframes color-to-color-02 {
+    0% {
+        background-color: var(--secondary);
+    }
+
+    50% {
+        background-color: var(--primary);
+    }
+
+    100% {
+        background-color: var(--secondary);
+    }
+}
+
+.tentang,
+.galeri {
+    /* background-image: linear-gradient(to left, var(--secondary), var(--primary)); */
+    /* background-size: 200%; */
+    /* animation: gradient-02 15s infinite; */
+    animation: color-to-color-02 15s infinite;
+    animation-timing-function: ease-in-out;
+}
+
 .sambutan {
     background-color: var(--primary);
 }
@@ -539,6 +614,17 @@ header h1 {
     line-height: 1.5;
 }
 
+.sambutan-end {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.sambutan-end img {
+    width: 75px;
+    margin: 0;
+}
+
 .tentang {
     background-color: var(--secondary);
 }
@@ -560,7 +646,6 @@ header h1 {
 .tentang img {
     display: block;
     width: 150px;
-    height: 150px;
 }
 
 .tentang .slot img {
@@ -586,6 +671,16 @@ header h1 {
     margin-top: 5px;
 }
 
+.tentang-end {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.tentang-end img {
+    width: 75px;
+}
+
 .cerita {
     background-color: var(--primary);
 }
@@ -602,7 +697,7 @@ header h1 {
     font-weight: 400;
     text-align: center;
     letter-spacing: 1px;
-    margin-top: 25px;
+    margin-top: 50px;
 }
 
 .cerita h6 span {
@@ -638,6 +733,16 @@ header h1 {
     border-top-left-radius: 25px;
     border-bottom-right-radius: 25px;
     box-shadow: 0 5px 10px var(--black);
+}
+
+.galeri-end {
+    display: flex;
+    justify-content: center;
+    color: var(--primary-dark);
+    font-size: 30px;
+    text-shadow: 0 0 5px var(--white);
+    letter-spacing: 12px;
+    margin-top: 50px;
 }
 
 .acara {
@@ -679,13 +784,18 @@ header h1 {
     font-weight: 600;
     text-align: center;
     letter-spacing: 1px;
+    line-height: 2;
     margin-top: 100px;
+}
+
+.acara h6 span {
+    letter-spacing: 15px;
 }
 
 footer {
     color: var(--white);
     background-color: var(--footer);
-    box-shadow: 0 0 10px var(--white);
+    box-shadow: 0 0 10px var(--primary-dark);
     text-align: center;
     padding: 50px 100px;
 }

@@ -3,11 +3,12 @@
 
 
 // Welcome, Login, & Loading
+let welcomeNext = document.getElementById("welcomeNext");
 let welcome = document.querySelector(".welcome");
 let login = document.querySelector(".login");
 let loginHidden = document.querySelector(".login-hidden");
 
-welcome.addEventListener("click", function() {
+welcomeNext.addEventListener("click", function() {
     welcome.classList.remove("welcome");
     welcome.classList.add("welcome-finish");
     loginHidden.classList.remove("login-hidden");
@@ -21,6 +22,7 @@ document.getElementById("passwordForm").addEventListener("submit", function(even
     let notif = document.querySelector(".notif");
     let tutupNotifikasi = document.getElementById("tutup-notifikasi");
     let login = document.querySelector(".login");
+    let desainerNext = document.getElementById("desainerNext");
     let desainer = document.querySelector(".desainer");
     let desainerHidden = document.querySelector(".desainer-hidden");
     let loading01 = document.querySelector(".loading-01");
@@ -49,7 +51,7 @@ document.getElementById("passwordForm").addEventListener("submit", function(even
         desainerHidden.classList.remove("desainer-hidden");
         desainer.classList.add("transition-next");
 
-        desainer.addEventListener("click", function() {
+        desainerNext.addEventListener("click", function() {
             desainer.classList.remove("desainer");
             desainer.classList.add("desainer-finish");
             loading01hidden.classList.remove("loading-01-hidden");
