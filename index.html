@@ -18,6 +18,8 @@
 <body>
     <section class="container-section">
         <img src="assets/img/flower/01.png" alt="Flower" id="top-left">
+        <img src="assets/img/flower/01.png" alt="Flower" id="top-right">
+        <img src="assets/img/flower/01.png" alt="Flower" id="bottom-left">
         <img src="assets/img/flower/01.png" alt="Flower" id="bottom-right">
 
         <section class="welcome">
@@ -27,15 +29,15 @@
 
         <section class="login login-hidden">
             <form class="passwordForm" id="passwordForm">
-                <label for="password"> Masukkan Password </label>
-                <input type="password" id="password" placeholder="Password" required>
-                <button type="submit"> Masuk </button>
+                <label for="password"> * Masukkan Password * </label>
+                <input type="password" id="password" placeholder="Password" required oninvalid="this.setCustomValidity('Harap masukkan password terlebih dahulu!')" oninput="setCustomValidity('')">
+                <button type="submit"> Lanjutkan </button>
             </form>
         </section>
 
         <section class="notif">
             <div class="password-salah">
-                <p> Password Salah! </p>
+                <p> Maaf, Password Salah! </p>
                 <i class="fa-solid fa-xmark" id="tutup-notifikasi" title="Close"></i>
             </div>
         </section>
@@ -81,6 +83,18 @@
                     <i class="fa-solid fa-arrow-right next-04" title="Next"></i>
                 </div>
             </section>
+        </section>
+
+        <section class="end end-hidden">
+            <h1> Revan </h1>
+            <i class="fa-solid fa-heart love"></i>
+            <h1> Viza </h1>
+        </section>
+
+        <section class="end-img end-img-hidden">
+            <img src="assets/img/ring/photo-01.jpg" alt="Cincin">
+            <img src="assets/img/ring/photo-02.jpg" alt="Cincin">
+            <img src="assets/img/ring/photo-03.jpg" alt="Cincin">
         </section>
     </section>
 
@@ -251,6 +265,16 @@
                             <i class="fa-solid fa-heart love"></i>
                             <i class="fa-solid fa-heart love"></i>
                         </div>
+
+                        <div class="galeri-end">
+                            <i class="fa-solid fa-heart love"></i>
+                            <i class="fa-solid fa-heart love"></i>
+                            <i class="fa-solid fa-heart love"></i>
+                        </div>
+
+                        <div class="galeri-end">
+                            <i class="fa-solid fa-heart love"></i>
+                        </div>
                     </div>
                 </div>
 
@@ -282,7 +306,7 @@
                             </div>
                         </div>
 
-                        <h6> Mohon Doa & Restu <br><span><i class="fa-solid fa-heart love"></i><i class="fa-solid fa-heart love"></i></span></h6>
+                        <h6> Mohon Doa & Restu <br><span><i class="fa-solid fa-heart love"></i><i class="fa-solid fa-heart love"></i><i class="fa-solid fa-heart love"></i></span></h6>
                     </div>
                 </div>
             </div>
@@ -292,7 +316,7 @@
             <p> Kami dari keluarga besar Revan & Viza mengucapkan terima kasih kepada semuanya dan kami memohon doa & restunya agar pernikahan ini dapat menjadi awal yang baik dari kehidupan mereka berdua. </p>
             <h1> R & V </h1>
             <h2> Design by Revan </h2>
-            <h3> Copyright © 2023 M. Revanza Yuzar </h3>
+            <h3> Copyright © 2023 - 2024 <br> M. Revanza Yuzar </h3>
         </footer>
     </div>
 

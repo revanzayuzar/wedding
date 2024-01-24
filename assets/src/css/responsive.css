@@ -2,6 +2,10 @@
 
 @media (max-width: 1080px) {
 
+    .end-img img {
+        width: 200px;
+    }
+
     header {
         padding: 5px 20px;
     }
@@ -48,6 +52,8 @@
     }
 
     img#top-left,
+    img#top-right,
+    img#bottom-left,
     img#bottom-right {
         width: 100px;
     }
@@ -59,12 +65,12 @@
 
     .menu {
         transform: scale(1);
-        transition: transform 0.3s ease-out;
+        transition: transform 0.1s ease-out;
     }
 
     .menu-hidden {
         transform: scale(0);
-        transition: transform 0.3s ease-out;
+        transition: transform 0.1s ease-out;
     }
 
     .close {
@@ -84,10 +90,14 @@
         z-index: 1;
         background-color: rgba(0, 0, 0, 0.75);
         transform: scale(0);
+        opacity: 0;
+        transition: opacity 0.1s ease-out;
     }
 
     .opacity-active {
         transform: scale(1);
+        opacity: 1;
+        transition: opacity 0.1s ease-out;
     }
 
     .navbar {
@@ -104,19 +114,20 @@
         overflow-y: auto;
         padding: 50px;
         padding-top: 25px;
+        border-left: 5px solid var(--primary);
         transform: translateX(111%);
-        transition: transform 0.3s ease-out;
+        transition: transform 0.1s ease-out;
     }
 
     .navbar-active {
         transform: translateX(0);
-        transition: transform 0.3s ease-out;
+        transition: transform 0.1s ease-out;
     }
 
     .navbar a {
         width: 100%;
         margin-top: 50px;
-        padding: 5px 0;
+        padding: 10px 0;
     }
 
     .content {
@@ -138,16 +149,17 @@
         padding: 0 50px;
     }
 
-    .desainer h2 {
-        font-size: 12px;
-    }
-
     .loading .love {
         font-size: 55px;
     }
 
     .loading h1 {
         font-size: 25px;
+    }
+
+    .end-img img {
+        width: 175px;
+        margin: 0 10px;
     }
 
     .navbar {
@@ -215,6 +227,11 @@
 
 @media (max-width: 600px) {
 
+    .end-img img {
+        width: 150px;
+        margin: 0 5px;
+    }
+
     .tentang .slot {
         flex-direction: column;
     }
@@ -236,6 +253,14 @@
     .loading-03,
     .loading-04 {
         padding: 0 15px;
+    }
+
+    .end-img {
+        flex-direction: column;
+    }
+
+    .end-img img {
+        margin: 5px 0;
     }
 
     .navbar {

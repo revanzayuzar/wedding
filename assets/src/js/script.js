@@ -2,7 +2,7 @@
 
 
 
-// Welcome, Login, & Loading
+// Welcome, Login, Loading, & End
 let welcomeNext = document.getElementById("welcomeNext");
 let welcome = document.querySelector(".welcome");
 let login = document.querySelector(".login");
@@ -29,10 +29,14 @@ document.getElementById("passwordForm").addEventListener("submit", function(even
     let loading02 = document.querySelector(".loading-02");
     let loading03 = document.querySelector(".loading-03");
     let loading04 = document.querySelector(".loading-04");
+    let end = document.querySelector(".end");
+    let endImg = document.querySelector(".end-img");
     let loading01hidden = document.querySelector(".loading-01-hidden");
     let loading02hidden = document.querySelector(".loading-02-hidden");
     let loading03hidden = document.querySelector(".loading-03-hidden");
     let loading04hidden = document.querySelector(".loading-04-hidden");
+    let endHidden = document.querySelector(".end-hidden");
+    let endImgHidden = document.querySelector(".end-img-hidden");
     let next01 = document.querySelector(".next-01");
     let next02 = document.querySelector(".next-02");
     let next03 = document.querySelector(".next-03");
@@ -42,6 +46,8 @@ document.getElementById("passwordForm").addEventListener("submit", function(even
     let back03 = document.querySelector(".back-03");
     let containerSection = document.querySelector(".container-section");
     let imgTopLeft = document.getElementById("top-left");
+    let imgTopRight = document.getElementById("top-right");
+    let imgBottomLeft = document.getElementById("bottom-left");
     let imgBottomRight = document.getElementById("bottom-right");
     let fixed = document.querySelector(".fixed");
 
@@ -96,11 +102,27 @@ document.getElementById("passwordForm").addEventListener("submit", function(even
         next04.addEventListener("click", function() {
             loading04.classList.remove("loading-04");
             loading04.classList.add("loading-finish");
-            containerSection.classList.remove("container-section");
-            containerSection.classList.add(".container-section-finish");
-            imgTopLeft.classList.add("img-finish");
-            imgBottomRight.classList.add("img-finish");
-            fixed.classList.remove("fixed");
+            endHidden.classList.remove("end-hidden");
+            end.classList.add("end-animation");
+
+            setTimeout(function() {
+                end.classList.remove("end");
+                end.classList.add("end-finish");
+                endImgHidden.classList.remove("end-img-hidden");
+                endImg.classList.add("end-img-animation");
+
+                setTimeout(function() {
+                    endImg.classList.remove("end-img");
+                    endImg.classList.add("end-img-finish");
+                    containerSection.classList.remove("container-section");
+                    containerSection.classList.add(".container-section-finish");
+                    imgTopLeft.classList.add("img-finish");
+                    imgTopRight.classList.add("img-finish");
+                    imgBottomLeft.classList.add("img-finish");
+                    imgBottomRight.classList.add("img-finish");
+                    fixed.classList.remove("fixed");
+                }, 2300);
+            }, 2500);
         });
 
         back03.addEventListener("click", function() {
