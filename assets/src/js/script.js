@@ -29,14 +29,18 @@ document.getElementById("passwordForm").addEventListener("submit", function(even
     let loading02 = document.querySelector(".loading-02");
     let loading03 = document.querySelector(".loading-03");
     let loading04 = document.querySelector(".loading-04");
-    let end = document.querySelector(".end");
-    let endImg = document.querySelector(".end-img");
     let loading01hidden = document.querySelector(".loading-01-hidden");
     let loading02hidden = document.querySelector(".loading-02-hidden");
     let loading03hidden = document.querySelector(".loading-03-hidden");
     let loading04hidden = document.querySelector(".loading-04-hidden");
+    let end = document.querySelector(".end");
     let endHidden = document.querySelector(".end-hidden");
-    let endImgHidden = document.querySelector(".end-img-hidden");
+    let endImg01 = document.querySelector(".end-img-01");
+    let endImg02 = document.querySelector(".end-img-02");
+    let endImg03 = document.querySelector(".end-img-03");
+    let endImg01Hidden = document.querySelector(".end-img-01-hidden");
+    let endImg02Hidden = document.querySelector(".end-img-02-hidden");
+    let endImg03Hidden = document.querySelector(".end-img-03-hidden");
     let next01 = document.querySelector(".next-01");
     let next02 = document.querySelector(".next-02");
     let next03 = document.querySelector(".next-03");
@@ -106,22 +110,31 @@ document.getElementById("passwordForm").addEventListener("submit", function(even
             end.classList.add("end-animation");
 
             setTimeout(function() {
-                end.classList.remove("end");
                 end.classList.add("end-finish");
-                endImgHidden.classList.remove("end-img-hidden");
-                endImg.classList.add("end-img-animation");
+                endImg01Hidden.classList.remove("end-img-01-hidden");
+                endImg01.classList.add("end-img-animation");
 
                 setTimeout(function() {
-                    endImg.classList.remove("end-img");
-                    endImg.classList.add("end-img-finish");
-                    containerSection.classList.remove("container-section");
-                    containerSection.classList.add(".container-section-finish");
-                    imgTopLeft.classList.add("img-finish");
-                    imgTopRight.classList.add("img-finish");
-                    imgBottomLeft.classList.add("img-finish");
-                    imgBottomRight.classList.add("img-finish");
-                    fixed.classList.remove("fixed");
-                }, 2300);
+                    endImg01.classList.add("end-img-finish");
+                    endImg02Hidden.classList.remove("end-img-02-hidden");
+                    endImg02.classList.add("end-img-animation");
+
+                    setTimeout(function() {
+                        endImg02.classList.add("end-img-finish");
+                        endImg03Hidden.classList.remove("end-img-03-hidden");
+                        endImg03.classList.add("end-img-animation");
+
+                        setTimeout(function() {
+                            endImg03.classList.add("end-img-finish");
+                            containerSection.classList.add("container-section-finish");
+                            imgTopLeft.classList.add("img-finish");
+                            imgTopRight.classList.add("img-finish");
+                            imgBottomLeft.classList.add("img-finish");
+                            imgBottomRight.classList.add("img-finish");
+                            fixed.classList.remove("fixed");
+                        }, 2300);
+                    }, 2500);
+                }, 2500);
             }, 2500);
         });
 

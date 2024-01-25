@@ -2,10 +2,6 @@
 
 @media (max-width: 1080px) {
 
-    .end-img img {
-        width: 200px;
-    }
-
     header {
         padding: 5px 20px;
     }
@@ -157,11 +153,6 @@
         font-size: 25px;
     }
 
-    .end-img img {
-        width: 175px;
-        margin: 0 10px;
-    }
-
     .navbar {
         width: 40%;
     }
@@ -227,11 +218,6 @@
 
 @media (max-width: 600px) {
 
-    .end-img img {
-        width: 150px;
-        margin: 0 5px;
-    }
-
     .tentang .slot {
         flex-direction: column;
     }
@@ -253,14 +239,6 @@
     .loading-03,
     .loading-04 {
         padding: 0 15px;
-    }
-
-    .end-img {
-        flex-direction: column;
-    }
-
-    .end-img img {
-        margin: 5px 0;
     }
 
     .navbar {
